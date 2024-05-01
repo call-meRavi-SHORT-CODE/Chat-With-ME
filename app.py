@@ -4,8 +4,7 @@ import time
 
 from chat import get_response
 
-st.title("Chat With Me")
-
+st.title("Chat With Me 💬 ")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -26,6 +25,9 @@ if prompt := st.chat_input("What is up?"):
 
     # Generate assistant response
     assistant_response = get_response(prompt)
+
+    # Add a slight delay before displaying the assistant response
+    time.sleep(0.005)
 
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
